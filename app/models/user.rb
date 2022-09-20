@@ -11,5 +11,6 @@ class User < ApplicationRecord
   end
 
   has_many :posts, dependent: :destroy
-  attachment :profile_image
+  has_many :browses, dependent: :destroy
+  attachment :profile_image_id
 end

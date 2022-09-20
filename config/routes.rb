@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root 'homes#index'
   resources :users
   resources :posts
+  resources :browses
   devise_scope :user do
     post 'users/guest_sign_in', to: 'users/sessions#guest_sign_in'
   end
