@@ -9,4 +9,7 @@ class User < ApplicationRecord
       user.password = SecureRandom.urlsafe_base64
     end
   end
+
+  has_many :posts, dependent: :destroy
+  attachment :profile_image
 end
