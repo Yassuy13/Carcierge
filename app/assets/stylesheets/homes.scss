@@ -1,3 +1,119 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.home-main {
+  background-image: url(https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 650px;
+  width: 100%;
+  position: relative;
+}
+
+.main-search {
+  background-color: #fff;
+  width: 500px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.main-message {
+  margin: 0;
+  text-align: center;
+}
+
+.home-sub {
+  display: block;
+}
+
+.container-form {
+  text-align: center;
+  display: flex;
+  left: 50%;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.posts-form {
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.home-sub h3 {
+  margin: 30px;
+  padding: 5px;
+  color: #2c2c2f;
+  background: #cde4ff;
+  border-top: solid 5px #5989cf;
+  border-bottom: solid 5px #5989cf;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  width: 100%;
+}
+
+.contents-item {
+  display: flex;
+}
+
+.contents-item li {
+  margin: 0 5px;
+  display: block;
+  position: relative;
+  text-align: center;
+  border: solid;
+  border-color: #000;
+}
+
+.contents-item li p {
+  color: #FFF;
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 50px;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  padding-right: 30px;
+}
+
+.car-img {
+  object-fit: cover;
+  height: 360px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.carcompany {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.car-item {
+  margin: auto;
+}
+
+.car-item a {
+  text-decoration: none;
+}
+
+.car-item a:hover, a:visited {
+  color: inherit;
+}
+
+.car-item div {
+  text-align: center;
+}
