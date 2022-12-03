@@ -1,1 +1,12 @@
-<h1>postページ</h1>
+<div class="post">
+  <div class="text">
+    <div class="title">
+      <h2>投稿一覧</h2>
+    </div>
+    <% @posts.each do |post| %>
+      <%= link_to post_path(post) do %>
+        <p><%= post.title %></p>
+      <% end %>
+    <% end %>
+  </div>
+</div>
