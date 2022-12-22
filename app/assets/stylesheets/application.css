@@ -55,7 +55,7 @@
   border: solid;
   border-color: #fff;
   position: relative;
-  bottom: 5px;
+  padding-top: 17px;
 }
 
 .user-name {
