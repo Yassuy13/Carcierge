@@ -23,6 +23,5 @@
   <% @post.browses.each do |browse| %>
     <p><%= browse.body %></p>
     <%= attachment_image_tag @browse, :car_image, :size => '200x200', fallback: "no-image.png", class: "images" %>
-    <%= link_to("削除", "post_browse_path", method: :delete, data: {confirm: "本当に削除しますか？"}) %>
   <% end %>
 </div>
