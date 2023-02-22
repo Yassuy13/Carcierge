@@ -111,7 +111,7 @@
 .footer {
   bottom: 0;
   background-color: #c0c0c0;
-  height: 50px;
+  height: 120px;
   width: 100%;
   color: #000;
   text-align: center;
@@ -211,4 +211,16 @@
   position: absolute;
   right: 11px;
   top: 16px;
+}
+
+.footer-content {
+  padding-top: 5px;
+}
+
+.footer li {
+  text-align: left;
+}
+
+.footer-item {
+  text-decoration: none;
 }
