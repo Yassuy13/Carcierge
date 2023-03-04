@@ -3,6 +3,7 @@
     <div class="title">
       <h2>投稿詳細</h2>
     </div>
+    <p class="user-name">ユーザー名<br><%= current_user.name %></p>
     <% if current_user.name? %>
       <%= attachment_image_tag @post, :car_image, :size => '200x200', class: "images" %>
     <% end %>
@@ -21,7 +22,8 @@
 </div>
 <div class="browse">
   <% @post.browses.each do |browse| %>
+    <p class="user-name"><%= current_user.name %></p>
     <p><%= browse.body %></p>
-    <%= attachment_image_tag @browse, :car_image, :size => '200x200', fallback: "no-image.png", class: "images" %>
+    <%= attachment_image_tag browse, :car_image, :size => '200x200', fallback: "no-image.png", class: "images" %>
   <% end %>
 </div>
