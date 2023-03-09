@@ -11,6 +11,7 @@ class BrowsesController < ApplicationController
   def new
     @post = Post.find(params[:post_id])
     @browse = Browse.new
+    @user = current_user
   end
 
   def create

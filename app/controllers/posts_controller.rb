@@ -3,15 +3,18 @@ class PostsController < ApplicationController
   before_action :ensure_correct_user, only: [:edit, :update, :destroy]
   def index
     @posts = Post.where('title LIKE ?', "%#{params[:search]}%")
+    @user = current_user
   end
 
   def show
     @post = Post.find(params[:id])
     @browse = Browse.new
+    @user = current_user
   end
 
   def new
     @post = Post.new
+    @user = current_user
   end
 
   def create
@@ -28,6 +31,7 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    @user = current_user
   end
 
   def update
