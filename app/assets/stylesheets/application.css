@@ -53,9 +53,10 @@
 .header-img {
   margin-right: 100px;
   border: solid;
+  border-radius: 50px;
   border-color: #fff;
   position: relative;
-  padding-top: 17px;
+  margin-top: 10px;
 }
 
 .user-name {
