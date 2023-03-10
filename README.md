@@ -18,7 +18,7 @@ Carciergeは車に関するQ&Aサイトです。今では、一家に一台と�
 
 ## ER図
 
-![erd.pdf](https://github.com/Yassuy13/Carcierge/files/10833046/erd.pdf)
+![erd.pdf](https://user-images.githubusercontent.com/97498529/224223385-5f4426ca-3279-4427-8907-e2ad97118125.png)
 
 # 当サービスについて
 ## 作成動機
