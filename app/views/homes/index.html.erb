@@ -1,0 +1,94 @@
+<div class="home-main">
+  <%= render "shared/devise" %>
+  <div class="main-search">
+    <h3 class="main-message">Carciergeで新しい車探し</h3>
+    <div class="container-form">
+      <%= form_with url: '/posts', method: :get do |f| %>
+        <%= f.text_field :search, class:'form__txt', size: 10, value: params[:search], :placeholder => "キーワード" %>
+        <%= f.submit '検索', name: nil, class: 'btn btn__search' %>
+      <% end %>
+    </div>
+    <div class="posts-form">
+      <%= form_with url: '/posts/new', method: :get do |f| %>
+        <%= f.submit '投稿する', name: nil, class: 'btn btn__search' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="carcierge">
+  <h3>Carciergeとは何か？</h3>
+  <p>新しい車が欲しい！と思ったときに何が良いんだろう？どんな種類があるんだろう？<br>
+  また、誰に聞けば良いんだ？実際にお店に行くのも億劫だなと思っている人もいるかと思います。<br>
+  そんな時に使えるのが、Carcierge！<br>
+  皆さんの悩みを共有して、自分に合った車探しをしましょう！</p>
+</div>
+<div class="home-sub">
+  <h3>カテゴリー</h3>
+  <div class = "content">
+    <div class="contents-item">
+      <%= link_to posts_path(search: "軽自動車") do %>
+        <li><p>軽自動車</p><img class="car-img" src="https://cdn.pixabay.com/photo/2019/07/07/14/03/fiat-500-4322521_1280.jpg"></li>
+      <% end %>
+      <%= link_to posts_path(search: "普通車") do %>
+        <li><p>普通車</p><img class="car-img" src="https://cdn.pixabay.com/photo/2016/09/15/12/12/renault-clio-1671405_1280.jpg"></li>
+      <% end %>
+      <%= link_to posts_path(search: "SUV") do %>
+        <li><p>SUV</p><img class="car-img" src="https://cdn.pixabay.com/photo/2019/05/04/23/59/maserati-levante-4179432_1280.jpg"></li>
+      <% end %>
+      <%= link_to posts_path(search: "大型車") do %>
+        <li><p>大型車</p><img class="car-img" src="https://cdn.pixabay.com/photo/2021/12/23/17/09/cadillac-6889682_1280.jpg"></li>
+      <% end %>
+    </div>
+  </div>
+  <h3>各々の自動車WEBサイト</h3>
+  <div class="carcompany">
+    <div class="car-item">
+      <a href="https://toyota.jp/index.html" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>トヨタ</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.nissan.co.jp/" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>日産</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.suzuki.co.jp/car/lineup/?utm_source=google&utm_medium=cpc&utm_campaign=hkd_all_alwayson_02NN_i&gclid=CjwKCAjw2OiaBhBSEiwAh2ZSP5qWdOkYrWKlVpSPVniXfVEuf3Yd8Ap2WjCx7cdl6HSIhI4_AClXnhoCeAAQAvD_BwE" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>スズキ</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.subaru.jp/" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>スバル</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.daihatsu.co.jp/index.htm" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>ダイハツ</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.honda.co.jp/" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>ホンダ</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.mazda.co.jp/" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>マツダ</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.mitsubishi-motors.co.jp/" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>三菱</div>
+      </a>
+    </div>
+  </div>
+</div>

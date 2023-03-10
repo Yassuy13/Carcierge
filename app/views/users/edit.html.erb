@@ -1,0 +1,33 @@
+<div class="devise">
+  <div class="devise-item">
+    <div class="container">
+      <h1>ユーザー編集</h1>
+      <div class="column is-5">
+        <% if @user.email == 'guest@example.com'%>
+          <p>ゲストユーザーはユーザー情報の編集ができません。</p>
+        <% else %>
+          <%= form_with url: '/users/profile', method: :patch, model: @user do |f| %>
+            <div class="field">
+              <%= f.label :name, "ユーザー名", class: "label" %><br />
+              <%= f.text_field :name, class: "input", required: true %>
+            </div>
+            <div class="field">
+              <%= f.label :email, "メールアドレス", class: "label" %><br />
+              <%= f.email_field :email, class: "input", required: true %>
+            </div>
+            <div class="field">
+              <%= f.label :profile, "プロフィール", class: "label" %><br />
+              <%= f.text_area :profile, class: "textarea" %>
+            </div>
+            <div class="field">
+              <%= f.label :profile_image, "プロフィール画像", class: "label" %><br />
+              <%= f.file_field :profile_image, class: "input" %>
+            </div>
+            <%= f.submit "更新", class: "button is-success" %>
+          <% end %>
+        <% end %>
+        <%= link_to("戻る", "/users/#{@user.id}") %>
+      </div>
+    </div>
+  </div>
+</div>

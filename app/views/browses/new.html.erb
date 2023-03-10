@@ -1,0 +1,24 @@
+<div class="browses">
+  <div class="browses-item">
+    <div class="title">
+      <h2>回答投稿</h2>
+    </div>
+    <div class="answer">
+      <%= form_with(model: [@post, @browse], local: true) do |f| %>
+        <%= f.hidden_field :post_id, { value: @post.id} %>
+        <p><%= @post.title %></p>
+        <p><%= @post.body %></p>
+        <div>
+          <%= f.label :body, "回答" %><br>
+          <%= f.text_area :body, :size=>"60x10" %>
+        </div>
+        <div>
+          <%= f.label :image, "車の画像" %><br>
+          <%= f.file_field :car_image, fallback: "no-image.png" %>
+        </div>
+        <%= f.submit "投稿" %>
+      <% end %>
+      <%= link_to("戻る", "/posts/#{@post.id}") %>
+    </div>
+  </div>
+</div>
