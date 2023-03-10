@@ -77,3 +77,7 @@ gem "refile-mini_magick"
 
 gem 'rubyzip'
 gem 'high_voltage'
+
+gem 'net-smtp'
+gem 'net-imap'
+gem 'net-pop'
