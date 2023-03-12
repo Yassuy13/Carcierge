@@ -11,8 +11,12 @@
   <div class="header-left">
     <div class="change-buttons">
       <% if user_signed_in? %>
-        <p class="user-name"><%= current_user.name %></p>
-        <%= attachment_image_tag @user, :profile_image, :size => '50x50', fallback: "no-image.png", class: "header-img" %>
+        <% if @user.name == 'ゲスト'%>
+          <p class="guest-name"><%= current_user.name %></p>
+        <% else %>
+          <p class="user-name"><%= current_user.name %></p>
+          <%= attachment_image_tag @user, :profile_image, :size => '50x50', fallback: "no-image.png", class: "header-img" %>
+        <% end %>
         <div class="hamburger-menu">
           <input type="checkbox" id="menu-btn-check">
           <label for="menu-btn-check" class="menu-btn"><span></span></label>
