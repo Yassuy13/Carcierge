@@ -11,7 +11,7 @@
   <div class="header-left">
     <div class="change-buttons">
       <% if user_signed_in? %>
-        <% if @user.name == 'ゲスト'%>
+        <% if current_user.name == 'ゲスト'%>
           <p class="guest-name"><%= current_user.name %></p>
         <% else %>
           <p class="user-name"><%= current_user.name %></p>
