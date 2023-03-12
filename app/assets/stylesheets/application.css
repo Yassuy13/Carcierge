@@ -60,12 +60,14 @@
 }
 
 .user-name {
-  padding-top: 10px;
+  padding-top: 30px;
+  font-size: 20px;
 }
 
 .guest-name {
   margin-right: 100px;
-  padding-top: 10px;
+  padding-top: 30px;
+  font-size: 20px;
 }
 
 .btn0 {
@@ -229,4 +231,18 @@
 
 .footer-item {
   text-decoration: none;
+}
+
+.pagination>li>a {          
+  border: none;
+  color: #696969;
+}
+
+.pagination>.active>a {     
+  background: #93c9ff;
+  border-radius: 15px;
+}
+
+.pagination>li>a:hover {        
+  border-radius: 15px;
 }

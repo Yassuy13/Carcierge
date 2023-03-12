@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :ensure_correct_user, only: [:edit, :update, :destroy]
   def index
-    @posts = Post.where('title LIKE ?', "%#{params[:search]}%")
+    @posts = Post.where('title LIKE ?', "%#{params[:search]}%").page(params[:page]).per(10)
     @user = current_user
   end
 
