@@ -2,7 +2,11 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :ensure_correct_user, only: [:edit, :update, :destroy]
   def index
-    @posts = Post.where('title LIKE ?', "%#{params[:search]}%").page(params[:page]).per(10)
+    if params[:category_id]
+      @posts = Post.where(category_id: params[:category_id]).page(params[:page]).per(10)
+    else
+      @posts = Post.where('title LIKE ? or body LIKE ?', "%#{params[:search]}%", "%#{params[:search]}%").page(params[:page]).per(10)
+    end
     @user = current_user
   end
 
@@ -54,7 +58,7 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, :body, :car_image)
+      params.require(:post).permit(:title, :body, :car_image, :category_id)
     end
 
     def ensure_correct_user

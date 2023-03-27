@@ -13,6 +13,7 @@ class User < ApplicationRecord
 
   has_many :posts, dependent: :destroy
   has_many :browses, dependent: :destroy
+  has_many :categories
   attachment :profile_image
   validates :name, presence: true
 end

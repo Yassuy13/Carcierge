@@ -1,0 +1,16 @@
+<div class="categories">
+  <div class="categories-item">
+    <div class="title">
+      <h2>カテゴリの追加</h2>
+    </div>
+    <%= form_with model: @category, local: true do |f| %>
+        <div class='from_input'>
+          <%= f.label :name, "カテゴリ名" %>
+          <%= f.text_field :name %>
+        </div>
+        <div class="form_action">
+          <%= f.submit "登録する", class: "btn btn-primary" %>
+        </div>
+    <% end %>
+  </div>
+</div>
