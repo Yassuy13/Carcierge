@@ -5,7 +5,7 @@
     </div>
     <p class="user-name">ユーザー名<br><%= @post.user.name %></p>
     <% if current_user.name? %>
-      <%= attachment_image_tag @post, :car_image, :size => '200x200', class: "images" %>
+      <%= attachment_image_tag @post, :car_image, :size => '200x200', fallback: "no-car-image.png", class: "images" %>
     <% end %>
     <p><%= @post.title %></p>
     <p><%= @post.body %></p>
@@ -25,6 +25,6 @@
   <% @post.browses.each do |browse| %>
     <p class="user-name"><%= browse.user.name %></p>
     <p><%= browse.body %></p>
-    <%= attachment_image_tag browse, :car_image, :size => '200x200', fallback: "no-image.png", class: "images" %>
+    <%= attachment_image_tag browse, :car_image, :size => '200x200', fallback: "no-car-image.png", class: "images" %>
   <% end %>
 </div>
