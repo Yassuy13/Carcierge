@@ -81,3 +81,5 @@ gem 'high_voltage'
 gem 'net-smtp'
 gem 'net-imap'
 gem 'net-pop'
+
+gem 'kaminari'

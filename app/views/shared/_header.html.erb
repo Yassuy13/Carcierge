@@ -11,8 +11,12 @@
   <div class="header-left">
     <div class="change-buttons">
       <% if user_signed_in? %>
-        <p class="user-name"><%= current_user.name %></p>
-        <%= attachment_image_tag @user, :profile_image, :size => '50x50', fallback: "no-image.png", class: "header-img" %>
+        <% if current_user.name == 'ゲスト'%>
+          <p class="guest-name"><%= current_user.name %></p>
+        <% else %>
+          <p class="user-name"><%= current_user.name %></p>
+          <%= attachment_image_tag @user, :profile_image, :size => '50x50', fallback: "no-image.png", class: "header-img" %>
+        <% end %>
         <div class="hamburger-menu">
           <input type="checkbox" id="menu-btn-check">
           <label for="menu-btn-check" class="menu-btn"><span></span></label>
@@ -23,6 +27,12 @@
               </li>
               <li class="nav-item">
                 <%= link_to '投稿一覧', posts_path, class:"btn0" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'カテゴリ追加', new_category_path, class:"btn0" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'カテゴリ一覧', categories_path, class:"btn0" %>
               </li>
               <li class="nav-item">
                 <%= link_to "設定", user_path(current_user), class:"btn0" %>

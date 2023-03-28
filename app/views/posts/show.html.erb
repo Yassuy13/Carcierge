@@ -3,12 +3,13 @@
     <div class="title">
       <h2>投稿詳細</h2>
     </div>
-    <p class="user-name">ユーザー名<br><%= current_user.name %></p>
+    <p class="user-name">ユーザー名<br><%= @post.user.name %></p>
     <% if current_user.name? %>
       <%= attachment_image_tag @post, :car_image, :size => '200x200', class: "images" %>
     <% end %>
     <p><%= @post.title %></p>
     <p><%= @post.body %></p>
+    <p><%= @post.category.name %></p>
     <% if @post.user_id == current_user.id %>
       <%= link_to("編集", "/posts/#{@post.id}/edit") %>
       <%= link_to("削除", "/posts/#{@post.id}", method: :delete, data: {confirm: "本当に削除しますか？"}) %>
@@ -22,7 +23,7 @@
 </div>
 <div class="browse">
   <% @post.browses.each do |browse| %>
-    <p class="user-name"><%= current_user.name %></p>
+    <p class="user-name"><%= browse.user.name %></p>
     <p><%= browse.body %></p>
     <%= attachment_image_tag browse, :car_image, :size => '200x200', fallback: "no-image.png", class: "images" %>
   <% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_28_162657) do
+ActiveRecord::Schema.define(version: 2023_03_14_052219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 2022_10_28_162657) do
     t.index ["user_id"], name: "index_browses_on_user_id"
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_categories_on_user_id"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title", null: false
     t.text "body", null: false
@@ -33,6 +41,7 @@ ActiveRecord::Schema.define(version: 2022_10_28_162657) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
+    t.bigint "category_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -53,5 +62,6 @@ ActiveRecord::Schema.define(version: 2022_10_28_162657) do
 
   add_foreign_key "browses", "posts"
   add_foreign_key "browses", "users"
+  add_foreign_key "categories", "users"
   add_foreign_key "posts", "users"
 end
