@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe Post, type: :system do
   describe '投稿に関するテスト' do
     let!(:user) { create(:user) }
-    let!(:post) { create(:post, user_id: user.id) }
+    let!(:category) { create(:category, user_id: user.id) }
+    let!(:post) { create(:post, user_id: user.id, category_id: category.id) }
     
     describe '投稿のテスト' do
       before do
@@ -14,6 +15,7 @@ RSpec.describe Post, type: :system do
       it '正常に投稿が出来ること' do
         fill_in 'post[title]', with: 'title'
         fill_in 'post[body]', with: 'content'
+        select category.name
         expect { click_button '投稿' }.to change { user.posts.count }.by(1)
       end
     end
