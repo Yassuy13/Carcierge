@@ -13,12 +13,13 @@ Carciergeは車に関するQ&Aサイトです。今では、一家に一台と�
 - devise
 - refile
 - high_voltage
+- kaminari
 - Docker/docker-compose(開発環境)
 - AWS
 
 ## ER図
 
-![erd.pdf](https://github.com/Yassuy13/Carcierge/files/10833046/erd.pdf)
+![erd.pdf](https://user-images.githubusercontent.com/97498529/228144610-1c8f19c2-1cef-4bd2-85f5-a85ff9b2498c.png)
 
 # 当サービスについて
 ## 作成動機
@@ -44,8 +45,16 @@ Carciergeは車に関するQ&Aサイトです。今では、一家に一台と�
 ## 検索機能
 - フリーワードで質問を検索可能
 
+## カテゴリー機能
+- カテゴリーの追加
+- 投稿にカテゴリーを付与することが可能
+- カテゴリー覧から選択したカテゴリーのみの閲覧可能
+
 # Rspec
 - Browse
+  - 空欄でないこと
+
+- Category
   - 空欄でないこと
 
 - Post
@@ -58,6 +67,12 @@ Carciergeは車に関するQ&Aサイトです。今では、一家に一台と�
 
 - Browses
   - GET /new
+    - リクエストが成功すること
+
+- Categories
+  - GET /new
+    - リクエストが成功すること
+  - GET /index
     - リクエストが成功すること
 
 - Posts
@@ -75,6 +90,10 @@ Carciergeは車に関するQ&Aサイトです。今では、一家に一台と�
 - Browse
   - 回答
     - 正常に回答できること
+
+- Category
+  - カテゴリー登録のテスト
+    - 正常に登録が出来ること
 
 - Post
   - 投稿に関するテスト
@@ -104,8 +123,8 @@ Carciergeは車に関するQ&Aサイトです。今では、一家に一台と�
   - ゲストユーザーログイン
     - ゲストユーザーとしてログインできること
 
-Finished in 24.05 seconds (files took 32.3 seconds to load)
-21 examples, 0 failures
+Finished in 19.53 seconds (files took 18.54 seconds to load)
+25 examples, 0 failures
 
 ## 参考文献
 
