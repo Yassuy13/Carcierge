@@ -6,6 +6,7 @@ class PostsController < ApplicationController
       @posts = Post.where(category_id: params[:category_id]).page(params[:page]).per(10)
     else
       @posts = Post.where('title LIKE ? or body LIKE ?', "%#{params[:search]}%", "%#{params[:search]}%").page(params[:page]).per(10)
+      @posts = Post.joins(:browses).select('posts.*, browses.body').page(params[:page]).per(10)
     end
     @user = current_user
   end
