@@ -66,7 +66,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'aws-sdk', '~> 3.0'
+gem 'aws-sdk', '~> 2.0'
 
 gem 'devise'
 gem 'devise-i18n'
@@ -83,3 +83,6 @@ gem 'net-imap'
 gem 'net-pop'
 
 gem 'kaminari'
+
+gem "refile-s3"
+gem "dotenv-rails"
