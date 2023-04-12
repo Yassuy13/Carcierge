@@ -76,13 +76,19 @@ GEM
       rake (>= 10.4, < 14.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-sdk (2.11.632)
-      aws-sdk-resources (= 2.11.632)
-    aws-sdk-core (2.11.632)
-      aws-sigv4 (~> 1.0)
-      jmespath (~> 1.0)
-    aws-sdk-resources (2.11.632)
-      aws-sdk-core (= 2.11.632)
+    aws-partitions (1.745.0)
+    aws-sdk-core (3.171.0)
+      aws-eventstream (~> 1, >= 1.0.2)
+      aws-partitions (~> 1, >= 1.651.0)
+      aws-sigv4 (~> 1.5)
+      jmespath (~> 1, >= 1.6.1)
+    aws-sdk-kms (1.63.0)
+      aws-sdk-core (~> 3, >= 3.165.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-s3 (1.120.1)
+      aws-sdk-core (~> 3, >= 3.165.0)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.4)
     aws-sigv4 (1.5.2)
       aws-eventstream (~> 1, >= 1.0.2)
     bcrypt (3.1.18)
@@ -117,10 +123,6 @@ GEM
     diff-lcs (1.5.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    dotenv (2.8.1)
-    dotenv-rails (2.8.1)
-      dotenv (= 2.8.1)
-      railties (>= 3.2)
     erubi (1.12.0)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
@@ -261,9 +263,6 @@ GEM
     refile-mini_magick (0.2.0)
       mini_magick (~> 4.0)
       refile (~> 0.5)
-    refile-s3 (0.2.0)
-      aws-sdk (~> 2.0)
-      refile (~> 0.6.0)
     regexp_parser (2.7.0)
     responders (3.1.0)
       actionpack (>= 5.2)
@@ -398,13 +397,13 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  aws-sdk-s3
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
   devise
   devise-i18n
   devise-i18n-views
-  dotenv-rails
   factory_bot_rails
   high_voltage
   jbuilder (~> 2.7)
@@ -423,7 +422,6 @@ DEPENDENCIES
   rails-erd
   refile!
   refile-mini_magick
-  refile-s3
   rspec-rails
   rubocop
   rubocop-airbnb
