@@ -400,7 +400,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
-  aws-sdk (~> 2.0)
+  aws-sdk
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
