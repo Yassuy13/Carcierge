@@ -49,7 +49,6 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'net-smtp'
   gem 'spring-watcher-listen'
   gem 'rubocop', require: false
   gem 'rubocop-airbnb', require: false
@@ -66,7 +65,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'aws-sdk-s3', require: false
+gem 'aws-sdk', '~> 2.0'
 
 gem 'devise'
 gem 'devise-i18n'
@@ -83,3 +82,8 @@ gem 'net-imap'
 gem 'net-pop'
 
 gem 'kaminari'
+
+gem "refile-s3"
+gem "dotenv-rails"
+
+gem "webrick"
