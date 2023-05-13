@@ -39,6 +39,6 @@ class BrowsesController < ApplicationController
 
   private
     def browse_params
-      params.require(:browse).permit(:body, :car_image)
+      params.require(:browse).permit(:body, :image)
     end
 end

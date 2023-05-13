@@ -5,7 +5,11 @@
       <div class="columns is-centered">
         <div class="column is-4">
           <figure class="image is-128x128"  style="margin-left: auto; margin-right: auto;">
-            <%= attachment_image_tag @user, :profile_image, :size => '200x200', fallback: "no-image.png" %>
+          <% if @user.image.attached? %>
+            <%= image_tag @user.image, size: '200x200' %>
+          <% else %>
+            <%= image_tag 'no-image.png', size: '200x200' %>
+          <% end %>
           </figure>
         </div>
         <td class="is-size-4">
