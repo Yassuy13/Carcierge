@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -66,13 +66,11 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'aws-sdk'
+gem 'aws-sdk-s3', require: false
 
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
-
-gem "refile", require: "refile/rails", github: 'manfe/refile'
-gem "refile-mini_magick"
 
 gem 'rubyzip'
 gem 'high_voltage'
@@ -83,7 +81,6 @@ gem 'net-pop'
 
 gem 'kaminari'
 
-gem "refile-s3"
 gem "dotenv-rails"
 
-gem "webrick"
+gem 'mini_magick'

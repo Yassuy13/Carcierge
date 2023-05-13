@@ -15,7 +15,11 @@
           <p class="guest-name"><%= current_user.name %></p>
         <% else %>
           <p class="user-name"><%= current_user.name %></p>
-          <%= attachment_image_tag @user, :profile_image, :size => '50x50', fallback: "no-image.png", class: "header-img" %>
+          <% if @user.image.attached? %>
+            <%= image_tag @user.image, size: '50x50', class: "header-img" %>
+          <% else %>
+            <%= image_tag 'no-image.png', size: '50x50', class: "header-img" %>
+          <% end %>
         <% end %>
         <div class="hamburger-menu">
           <input type="checkbox" id="menu-btn-check">

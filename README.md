@@ -11,7 +11,7 @@ Carciergeは車に関するQ&Aサイトです。今では、一家に一台と�
 - rubocop
 - PostgreSQL1.1
 - devise
-- refile
+- active storage
 - high_voltage
 - kaminari
 - Docker/docker-compose(開発環境)
@@ -19,7 +19,7 @@ Carciergeは車に関するQ&Aサイトです。今では、一家に一台と�
 
 ## ER図
 
-![erd.pdf](https://user-images.githubusercontent.com/97498529/228144610-1c8f19c2-1cef-4bd2-85f5-a85ff9b2498c.png)
+![erd.pdf](https://github.com/Yassuy13/Carcierge/assets/97498529/b831e037-317b-47da-9a77-2106e8ed9e3d)
 
 # 当サービスについて
 ## 作成動機

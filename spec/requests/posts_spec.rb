@@ -15,6 +15,7 @@ RSpec.describe "Posts", type: :request do
 
   describe "GET /index" do
     it "リクエストが成功すること" do
+      sign_in user
       get posts_path
       expect(response).to have_http_status(:success)
     end

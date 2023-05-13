@@ -5,7 +5,11 @@
     </div>
     <p class="user-name">ユーザー名<br><%= @post.user.name %></p>
     <% if current_user.name? %>
-      <%= attachment_image_tag @post, :car_image, :size => '200x200', fallback: "no-car-image.png", class: "images" %>
+      <% if @post.image.attached? %>
+        <%= image_tag @post.image, size: '200x200', class: "images" %>
+      <% else %>
+        <%= image_tag 'no-car-image.png', size: '200x200', class: "images" %>
+      <% end %>
     <% end %>
     <p><%= @post.title %></p>
     <p><%= @post.body %></p>
@@ -25,6 +29,10 @@
   <% @post.browses.each do |browse| %>
     <p class="user-name"><%= browse.user.name %></p>
     <p><%= browse.body %></p>
-    <%= attachment_image_tag browse, :car_image, :size => '200x200', fallback: "no-car-image.png", class: "images" %>
+    <% if browse.image.attached? %>
+      <%= image_tag browse.image, size: '200x200', class: "images" %>
+    <% else %>
+      <%= image_tag 'no-car-image.png', size: '200x200', class: "images" %>
+    <% end %>
   <% end %>
 </div>
