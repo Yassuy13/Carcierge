@@ -61,7 +61,6 @@
 }
 
 .carcierge p {
-  
   border: 10px outset #31A9EE;
   text-align: center;
 }
@@ -76,41 +75,10 @@
   text-align: center;
 }
 
-.content {
-  display: block;
-  width: 100%;
-}
-
-.contents-item {
-  display: flex;
-}
-
-.contents-item li {
-  margin: 0 5px;
-  display: block;
-  position: relative;
-  text-align: center;
-  border: solid;
-  border-color: #000;
-}
-
-.contents-item li p {
-  color: #FFF;
-  font-size: 25px;
-  font-weight: bold;
-  position: absolute;
-  bottom: 50px;
-  z-index: 1;
-  width: 100%;
-  text-align: center;
-  padding-right: 30px;
-}
-
-.car-img {
-  object-fit: cover;
-  height: 360px;
-  width: 100%;
-  border-radius: 5px;
+.home-sub h2 {
+  padding-left: 10px;
+  margin-left: 30px;
+  border-left: 8px solid #f00;
 }
 
 .carcompany {
@@ -132,4 +100,5 @@
 
 .car-item div {
   text-align: center;
+  font-size: 12px;
 }

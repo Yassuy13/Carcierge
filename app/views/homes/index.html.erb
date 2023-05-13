@@ -23,29 +23,271 @@
   皆さんの悩みを共有して、自分に合った車探しをしましょう！</p>
 </div>
 <div class="home-sub">
-  <h3>カテゴリー</h3>
-  <div class = "content">
-    <div class="contents-item">
-      <%= link_to posts_path(search: "軽自動車") do %>
-        <li><p>軽自動車</p><img class="car-img" src="https://cdn.pixabay.com/photo/2019/07/07/14/03/fiat-500-4322521_1280.jpg"></li>
+  <h3>メーカー・ブランドから検索</h3>
+  <h2>国産車</h2>
+  <div class="carcompany">
+    <div class="car-item">
+      <%= link_to posts_path(search: "トヨタ") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="トヨタ" width="103" height="47">
+        <div>トヨタ</div>
       <% end %>
-      <%= link_to posts_path(search: "普通車") do %>
-        <li><p>普通車</p><img class="car-img" src="https://cdn.pixabay.com/photo/2016/09/15/12/12/renault-clio-1671405_1280.jpg"></li>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "レクサス") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="レクサス" width="103" height="47">
+        <div>レクサス</div>
       <% end %>
-      <%= link_to posts_path(search: "SUV") do %>
-        <li><p>SUV</p><img class="car-img" src="https://cdn.pixabay.com/photo/2019/05/04/23/59/maserati-levante-4179432_1280.jpg"></li>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "日産") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="日産" width="103" height="47">
+        <div>日産</div>
       <% end %>
-      <%= link_to posts_path(search: "大型車") do %>
-        <li><p>大型車</p><img class="car-img" src="https://cdn.pixabay.com/photo/2021/12/23/17/09/cadillac-6889682_1280.jpg"></li>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "ホンダ") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="ホンダ" width="103" height="47">
+        <div>ホンダ</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "マツダ") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="マツダ" width="103" height="47">
+        <div>マツダ</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "スバル") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="スバル" width="103" height="47">
+        <div>スバル</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "スズキ") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="スズキ" width="103" height="47">
+        <div>スズキ</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "三菱") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="三菱" width="103" height="47">
+        <div>三菱</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "ダイハツ") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="ダイハツ" width="103" height="47">
+        <div>ダイハツ</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "いすゞ") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="いすゞ" width="103" height="47">
+        <div>いすゞ</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "日野") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="日野自動車" width="103" height="47">
+        <div>日野自動車</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "光岡") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="光岡自動車" width="103" height="47">
+        <div>光岡自動車</div>
       <% end %>
     </div>
   </div>
-  <h3>各々の自動車WEBサイト</h3>
+  <h2>輸入車</h2>
+  <div class="carcompany">
+    <div class="car-item">
+      <%= link_to posts_path(search: "メルセデスベンツ") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="メルセデスベンツ" width="103" height="47">
+        <div>メルセデスベンツ</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "BMW") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="BMW" width="103" height="47">
+        <div>BMW</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "アウディ") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="アウディ" width="103" height="47">
+        <div>アウディ</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "フォルクスワーゲン") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="フォルクスワーゲン" width="103" height="47">
+        <div>フォルクスワーゲン</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "ポルシェ") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="ポルシェ" width="103" height="47">
+        <div>ポルシェ</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "プジョー") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="プジョー" width="103" height="47">
+        <div>プジョー</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "ミニ") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="ミニ" width="103" height="47">
+        <div>ミニ</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "ボルボ") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="ボルボ" width="103" height="47">
+        <div>ボルボ</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "Jeep") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="Jeep" width="103" height="47">
+        <div>Jeep</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "ルノー") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="ルノー" width="103" height="47">
+        <div>ルノー</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "フィアット") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="フィアット" width="103" height="47">
+        <div>フィアット</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+    <%= link_to posts_path(search: "テスラ") do %>
+      <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="テスラ" width="103" height="47">
+      <div>テスラ</div>
+    <% end %>
+  </div>
+  </div>
+  <h3>ボディタイプから検索</h3>
+  <div class="carcompany">
+    <div class="car-item">
+      <%= link_to posts_path(search: "軽自動車") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/kei.png" alt="軽自動車" width="103" height="47">
+        <div>軽自動車</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "コンパクトカー") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/compact.png" alt="コンパクトカー" width="103" height="47">
+        <div>コンパクトカー</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "ハッチバック") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/hatchback.png" alt="ハッチバック" width="103" height="47">
+        <div>ハッチバック</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "ミニバン") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/minivan.png" alt="ミニバン" width="103" height="47">
+        <div>ミニバン</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "SUV") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/suv.png" alt="SUV" width="103" height="47">
+        <div>SUV</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "ステーションワゴン") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/station_wagon.png" alt="ステーションワゴン" width="103" height="47">
+        <div>ステーションワゴン</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "セダン") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/sedan.png" alt="セダン" width="103" height="47">
+        <div>セダン</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "クーペ") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/coupe.png" alt="クーペ" width="103" height="47">
+        <div>クーペ</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "スポーツカー") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/open.png" alt="スポーツカー" width="103" height="47">
+        <div>スポーツカー</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "トラック") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/truck.png" alt="トラック" width="103" height="47">
+        <div>トラック</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "ピックアップトラック") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/pickup_truck.png" alt="ピックアップトラック" width="103" height="47">
+        <div>ピックアップトラック</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "商用車・バン") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/bodytype/kei.png" alt="商用車・バン" width="103" height="47">
+        <div>商用車・バン</div>
+      <% end %>
+    </div>
+  </div>
+  <h3>エンジンタイプから検索</h3>
+  <div class="carcompany">
+    <div class="car-item">
+      <%= link_to posts_path(search: "ガソリン") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/engine/gasoline.png" alt="ガソリン" width="80" height="47">
+        <div>ガソリン</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "ディーゼル") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/engine/diesel.png" alt="ディーゼル" width="80" height="47">
+        <div>ディーゼル</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "ハイブリッド") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/engine/hybrid.png" alt="ハイブリッド" width="80" height="47">
+        <div>ハイブリッド</div>
+      <% end %>
+    </div>
+    <div class="car-item">
+      <%= link_to posts_path(search: "電気自動車・EV") do %>
+        <img src="https://cdn.autoc-one.jp/used/image/engine/ev.png" alt="電気自動車・EV" width="80" height="47">
+        <div>電気自動車・EV</div>
+      <% end %>
+    </div>
+  </div>
+  <h3>国産車WEBサイト</h3>
   <div class="carcompany">
     <div class="car-item">
       <a href="https://toyota.jp/index.html" target="_blank">
         <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
         <div>トヨタ</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://lexus.jp/" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>レクサス</div>
       </a>
     </div>
     <div class="car-item">
@@ -88,6 +330,99 @@
       <a href="https://www.mitsubishi-motors.co.jp/" target="_blank">
         <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
         <div>三菱</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.isuzu.co.jp/" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>いすゞ</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.hino.co.jp/" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>日野自動車</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.mitsuoka-motor.com/" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>光岡自動車</div>
+      </a>
+    </div>
+  </div>
+  <h3>輸入車WEBサイト</h3>
+  <div class="carcompany">
+    <div class="car-item">
+      <a href="https://www.mercedes-benz.co.jp/passengercars.html?group=all&subgroup=all.saloon&view=BODYTYPE" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>メルセデスベンツ</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.bmw.co.jp/ja/index.html" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>BMW</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.audi.co.jp/jp/web/ja.html" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>アウディ</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.volkswagen.co.jp/ja.html" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>フォルクスワーゲン</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.porsche.com/japan/jp/" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>ポルシェ</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.peugeot.co.jp/" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>プジョー</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.mini.jp/ja_JP/home.html" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>ミニ</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.volvocars.com/jp/" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>ボルボ</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.jeep-japan.com/" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>Jeep</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.renault.jp/" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>ルノー</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.fiat-auto.co.jp/" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>フィアット</div>
+      </a>
+    </div>
+    <div class="car-item">
+      <a href="https://www.tesla.com/ja_jp" target="_blank">
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" width="150" height="100">
+        <div>テスラ</div>
       </a>
     </div>
   </div>
