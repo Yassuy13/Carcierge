@@ -42,6 +42,11 @@
   font-size: 30px;
 }
 
+.search_type {
+  margin: 10px 8px;
+  padding: 3px;
+}
+
 .form_txt {
   margin-left: 10px;
 }
