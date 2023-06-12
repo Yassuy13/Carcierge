@@ -13,8 +13,12 @@
         <%= f.text_area :body, :size=>"60x10" %>
       </div>
       <div>
-        <%= f.label :image, "車の画像(登録者のみ投稿可)" %><br>
-        <%= f.file_field :image, fallback: "no-image.png" %>
+        <% if @user.email == 'guest@example.com'%>
+          <%= f.label :image, "車の画像(登録者のみ投稿可)" %><br>
+        <% else %>
+          <%= f.label :image, "車の画像(登録者のみ投稿可)" %><br>
+          <%= f.file_field :image, fallback: "no-image.png" %>
+        <% end %>
       </div>
       <div>
         <%= f.label :category_id, "カテゴリー(必須)" %>
